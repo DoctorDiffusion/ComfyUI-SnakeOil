@@ -1,5 +1,5 @@
 # 🐍🛢️ComfyUI-SnakeOil
-Use Doctor Diffusion's snake oil nLoRAs as well as other negative LoRAs within ComfyUI.
+Use [Doctor Diffusion's snake oil nLoRAs](https://civitai.com/models/987843) as well as [other negative LoRAs](https://civitai.com/models/186617/doctor-diffusions-negative-xl-lora) within ComfyUI.
 
 ### Installation
 Manually install:
