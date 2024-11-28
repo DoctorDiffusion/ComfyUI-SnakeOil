@@ -11,9 +11,18 @@ class SnakeOil:
 
     @classmethod
     def INPUT_TYPES(cls):
-        # Define the directory where LoRA models are stored using a relative path
+        # Define the directory where nLoRA models are stored using a relative path
         lora_directory = os.path.join(os.path.dirname(__file__), "..", "..", "models", "nloras")
-        file_list = [f for f in os.listdir(lora_directory) if os.path.isfile(os.path.join(lora_directory, f))]
+
+        def list_safetensors_files(directory):
+            file_list = []
+            for root, _, files in os.walk(directory):
+                for file in files:
+                    if file.endswith(".safetensors"):
+                        file_list.append(os.path.relpath(os.path.join(root, file), directory))
+            return file_list
+
+        file_list = list_safetensors_files(lora_directory)
         file_list.insert(0, "None")
         return {
             "required": {
@@ -32,11 +41,11 @@ class SnakeOil:
             print("snake_oil_amount is 0, returning the original model.")
             return (model,)
 
-        # Invert the snake_oil_amount value to its negative equivalent
+        # Invert the snake_oil_amount value to its negative equivalent haha yes really
         snake_oil_amount = -snake_oil_amount
         print(f"Inverted snake_oil_amount: {snake_oil_amount}")
 
-        # Define the directory where LoRA models are stored using a relative path
+        # Define the directory where nLoRA models are stored using a relative path again maybe
         lora_directory = os.path.join(os.path.dirname(__file__), "..", "..", "models", "nloras")
         lora_path = os.path.join(lora_directory, nlora)
 
@@ -76,5 +85,5 @@ NODE_CLASS_MAPPINGS = {
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "SnakeOil": "🐍🛢️ Snake Oil"
+    "SnakeOil": "🐍🛢️ SnakeOil"
 }
