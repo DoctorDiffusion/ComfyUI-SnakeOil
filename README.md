@@ -20,6 +20,8 @@ Loads negative LoRAs or nLoras into image diffusion models with a simple slider 
 
 A little snake oil can go a long way.
 
+![snakeoil_00005](https://github.com/user-attachments/assets/3f0ab186-4477-4589-8cf1-8c86b8af29d0)
+
 ⭐ If you like the project, please give it a star! ⭐
 
 ## License
