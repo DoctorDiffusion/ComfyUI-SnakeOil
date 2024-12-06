@@ -2,7 +2,7 @@
 Use [Doctor Diffusion's snake oil nLoRAs](https://civitai.com/models/987843) as well as [other negative LoRAs](https://civitai.com/models/186617/doctor-diffusions-negative-xl-lora) easily within ComfyUI.
 
 ### Installation
-Manually install:
+Use the world famous [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager) or manually install:
 
 Navagate to your custom node folder `...ComfyUI/custom_nodes`
 ```
