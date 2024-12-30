@@ -33,10 +33,10 @@ class NegativeLoRALoader:
         }
 
     RETURN_TYPES = ("MODEL",)
-    FUNCTION = "apply_inverted_LoRA"
+    FUNCTION = "apply_inverted_lora"  # Corrected the method name here
     CATEGORY = "🐍🛢️ Snake Oil"
 
-    def apply_snake_oil(self, model, nlora, inverted_strength_value):
+    def apply_inverted_lora(self, model, nlora, inverted_strength_value):  # Corrected the method name here
         if inverted_strength_value == 0:
             print("inverted_strength_value is 0, returning the original model.")
             return (model,)
